@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #c40311; }
+
+.header-top {
+  display: flex;
+  font-size: 1.3rem;
+  margin: 2% 4%; }
+  .header-top .company-logo {
+    font-size: 2rem; }
+  .header-top .header-top-right {
+    margin-left: auto; }
+
+nav {
+  font-family: 'Questrial', sans-serif;
+  font-size: 1.1rem;
+  background: black;
+  margin: 0 4%;
+  border-radius: .3rem; }
+  nav .hamburgerButton {
+    display: none; }
+  nav ul {
+    display: flex;
+    align-items: center; }
+  nav li {
+    list-style: none; }
+  nav a {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    padding: 1.7rem; }
+    nav a:hover {
+      background: #133337; }
+  nav li:last-child {
+    margin-left: auto;
+    margin-right: 2%;
+    position: relative; }
+    nav li:last-child input {
+      padding: .7rem 1rem;
+      border: none;
+      border-radius: .3rem;
+      background: #c0c5ce; }
+    nav li:last-child .fa-search {
+      position: absolute;
+      top: 30%;
+      left: 85%; }
+
+.showcase {
+  background: url(img/superbike.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding-top: 52.5%;
+  margin: 0 4%;
+  border: 1px solid black; }
+  .showcase .showcase-caption {
+    font-size: 2.5rem;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: .5rem;
+    text-align: center; }
+
+.product-category {
+  margin: 0 4%;
+  padding: 2% 0;
+  background: #C0C0C0; }
+
+.product-images {
+  display: flex;
+  justify-content: space-between; }
+  .product-images .box-1 {
+    background: url(img/yamaha.jpg); }
+  .product-images .box-2 {
+    background: url(img/honda.jpg); }
+  .product-images .box-3 {
+    background: url(img/ducati.jpg); }
+  .product-images .box-4 {
+    background: url(img/suzuki.jpg); }
+  .product-images .image-box {
+    position: relative;
+    width: 23%;
+    padding-top: 10%;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #36bce2;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8); }
+    .product-images .image-box a {
+      text-decoration: none;
+      color: white;
+      display: inline-block;
+      width: 100%;
+      padding: .5rem 0; }
+      .product-images .image-box a:hover {
+        background: rgba(54, 188, 226, 0.8);
+        color: black; }
+  .product-images .product-detail {
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    text-align: center; }
+
+.companies {
+  margin: 6% 2% 2% 6%; }
+  .companies .company-1 img {
+    width: 25%; }
+  .companies .company-2 img {
+    width: 17%; }
+  .companies .company-3 img {
+    width: 11%; }
+  .companies .company-4 img {
+    width: 10%;
+    margin-left: 2%; }
+  .companies div {
+    display: inline;
+    margin: 3%; }
+
+footer {
+  margin: 0 4%; }
+  footer .footer-top {
+    padding-bottom: 4%;
+    background: black;
+    color: #a3a3a3;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-around; }
+    footer .footer-top div {
+      margin-top: 3%; }
+    footer .footer-top h4 {
+      margin-bottom: 4%; }
+    footer .footer-top .social-links div {
+      margin-bottom: 10%; }
+    footer .footer-top .social-links div:first-child {
+      margin-bottom: 13%; }
+    footer .footer-top .no-break {
+      white-space: nowrap; }
+  footer .footer-bottom {
+    background: #171717;
+    color: #a3a3a3;
+    padding: 2%; }
+
+@media (max-width: 950px) {
+  nav ul li {
+    display: none; }
+  nav .hamburgerButton {
+    display: flex;
+    align-items: center; }
+    nav .hamburgerButton button {
+      display: inline-block;
+      padding: .4rem .5rem;
+      cursor: pointer;
+      margin-left: auto;
+      margin-right: 1.5rem; }
+  nav ul {
+    display: block; }
+
+  .toggleNav {
+    display: block; }
+
+  .li-hide {
+    display: none; }
+
+  .last-li-positioning {
+    display: inline-block;
+    margin: 1rem 0; }
+    .last-li-positioning input {
+      margin-left: 1.5rem; } }
+@media (max-width: 800px) {
+  .showcase .showcase-caption {
+    font-size: 2rem; }
+
+  .product-images {
+    flex-wrap: wrap; }
+    .product-images div {
+      flex-basis: 40%; }
+    .product-images .box-1, .product-images .box-2 {
+      margin-bottom: 3%; }
+    .product-images .box-1, .product-images .box-3 {
+      margin-left: 3%; }
+    .product-images .box-2, .product-images .box-4 {
+      margin-right: 3%; }
+
+  footer .footer-top {
+    flex-wrap: wrap;
+    padding: 2% 5%; }
+    footer .footer-top div {
+      flex-basis: 50%; }
+    footer .footer-top div:last-child {
+      flex-basis: 100%;
+      display: flex;
+      align-items: center; }
+      footer .footer-top div:last-child div:first-child {
+        margin-top: 4%;
+        margin-right: 20%; }
+      footer .footer-top div:last-child div:last-child {
+        margin-top: 2.1%;
+        margin-left: 13%; } }
+@media (max-width: 500px) {
+  .header-top {
+    flex-wrap: wrap; }
+    .header-top div {
+      text-align: center;
+      flex-basis: 100%; }
+    .header-top div:last-child {
+      margin-top: 3%; }
+
+  .showcase .showcase-caption {
+    font-size: 1.5rem; }
+
+  .image-box .product-detail {
+    font-size: .7rem; }
+
+  .product-images .image-box a {
+    padding: .3rem 0; }
+
+  footer .footer-top div {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 5%; }
+  footer .footer-top div:last-child {
+    display: block; }
+    footer .footer-top div:last-child div:first-child {
+      margin: 0;
+      margin-bottom: 4%; }
+    footer .footer-top div:last-child div:last-child {
+      margin: 0; }
+    footer .footer-top div:last-child .twitter {
+      margin: 0;
+      margin-bottom: 1%; } }
+@media (max-width: 400px) {
+  .showcase .showcase-caption {
+    font-size: 1.3rem; }
+
+  .product-images div {
+    flex-basis: 100%; }
+  .product-images .box-1, .product-images .box-2, .product-images .box-3, .product-images .box-4 {
+    margin: 2% 20%; }
+
+  .product-images .image-box a {
+    padding: .2rem 0; }
+
+  .product-images .image-box {
+    padding-top: 18%; }
+
+  .companies div {
+    display: block;
+    text-align: center; }
+  .companies .company-1 img {
+    width: 30%; }
+  .companies .company-2 img {
+    width: 22%; }
+  .companies .company-3 img {
+    width: 17%;
+    margin-top: 3%; }
+  .companies .company-4 img {
+    width: 15%;
+    margin-top: 3%; }
+
+  footer .footer-bottom {
+    font-size: .9rem;
+    text-align: center; } }
+
+/*# sourceMappingURL=style.css.map */

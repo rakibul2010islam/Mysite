@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Magic Chess Board</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  	<!-- Bootstrap CSS -->
+  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  	<style>
+		body{
+			background: #e1e4e9;
+		}
+
+		.jumbotron{
+			height: 100px;
+			background: #3c0a2c;
+			color: white;
+		}
+
+		td{
+			background-color: white;
+			width: 85px;
+			height: 85px;
+		}
+
+		tr:first-child td:nth-child(2n){
+			background: black;
+		}
+
+		tr:nth-child(2) td:nth-child(2n+1){
+			background: black;
+		}
+
+		tr:nth-child(3) td:nth-child(2n){
+			background: black;
+		}
+
+		tr:nth-child(4) td:nth-child(2n+1){
+			background: black;
+		}
+
+		tr:nth-child(5) td:nth-child(2n){
+			background: black;
+		}
+
+		tr:nth-child(6) td:nth-child(2n+1){
+			background: black;
+		}
+
+		tr:nth-child(7) td:nth-child(2n){
+			background: black;
+		}
+
+		tr:nth-child(8) td:nth-child(2n+1){
+			background: black;
+		}
+
+		table{
+			border-color: black;
+		}
+
+		@media screen and (max-width: 800px){
+			td{
+				width: 70px;
+				height: 70px;
+			}
+		}
+
+		@media screen and (max-width: 600px){
+			td{
+				width: 50px;
+				height: 50px;
+			}
+		}
+
+		@media screen and (max-width: 400px){
+			td{
+				width: 30px;
+				height: 30px;
+			}
+
+			.jumbotron h1{
+				font-size: 1.5rem;
+			}
+		}
+
+  	</style>
+
+</head>
+<body>
+	<div class="container">
+
+		<div class="jumbotron">
+			<h1 align="center">Magic Chess Board</h1>
+		</div>
+
+		<table border="1" align="center">
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	
+	</div>
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	<script>
+		var tds = $('td');
+
+		tds.mouseover
+
+		for (var i = 0; i < tds.length; i++) {
+			
+			function getRandomColor(){
+				var letters = "0123456789ABCDEF";
+				var color = '#';
+				for(var i = 0; i < 6; i++){
+					color += letters[Math.floor(Math.random()*16)];
+				}
+				return color;
+			}
+			
+			tds.eq(i).mouseover(function(){
+				$(this).css('background-color', getRandomColor());	
+			});
+		};
+	</script>
+
+</body>
+</html>

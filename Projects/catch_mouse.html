@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Catch_Mouse</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  	<!-- Bootstrap CSS -->
+  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<style>
+		td{
+			background: #008080;
+			width: 120px;
+			height: 120px;
+			border-radius: 50%;
+			
+		}
+
+		table{
+			margin-top: 20px;
+		}
+
+		.score{
+			font-size: 2em;
+			padding-top: 20px;
+		}
+
+		button{
+			width: 80px;
+			margin-top: 20px;
+			height: 40px;
+		}
+
+		img:hover{
+			cursor: grab;
+		}
+
+	</style>
+  	
+
+</head>
+<body>
+
+	<div class="jumbotron" align="center">
+		<h1>Catch Mouse</h1>
+		<p>A mouse will appear on the circles. Click on the mouse to catch it</p>
+		<button class="btn btn-success">Start</button>
+	</div>
+
+	<table align="center">
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+
+
+	<div class="score" align="center">
+	Score: 0	
+	</div>
+
+	<div class="retry" align="center"></div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	<script>
+		
+		$('.btn-success').click(function(){
+			$(this).css('display', 'none');
+			var score = 0;
+			var tds = $('td');
+			var random_td = [];
+			var count = 0;
+
+
+			function myFunction(){
+				count = count+1;
+				if(count >= 21) clearInterval(timeout);
+				random_td.innerHTML = "";
+				random_td = [];
+				random_td = tds[Math.floor(Math.random() * tds.length)];
+				random_td.innerHTML = "<img src=\"../images/mouse4.png\"/>";
+						
+				$('img').on('click', function(){
+					score = score + 10;
+					document.querySelector('.score').innerHTML = "Score: " + score;
+				});		
+				
+				if(count>=21){
+					random_td.innerHTML = "";
+					random_td = [];
+					document.querySelector('.retry').innerHTML = "<button class=\"retryButton\">Retry</button>";
+				}
+
+				$(".retryButton").on('click', function(){
+					location.reload();
+				})
+			};
+
+			var timeout = setInterval(myFunction, 600);
+		});
+
+	</script>
+
+</body>
+</html>
