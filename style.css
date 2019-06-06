@@ -1,0 +1,150 @@
+body{
+	font-family: 'Roboto', sans-serif;
+	text-align: justify;
+	background-color: #e7f1ff;
+}
+
+.myCol{
+	background-color: #00e4f6;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	padding: 0px;
+}
+
+a{
+	color: black;
+}
+
+a:hover{
+	color: black;
+	text-decoration: none;
+}
+
+.myCol:hover{
+	background-color: #1aa6b7;
+}
+
+.navside{
+	background-color: #00e4f6;
+}
+
+.myNavbar{
+	border-bottom: 50px;
+	font-size: 18px;
+}
+
+a{
+	display: block;
+}
+
+.withinPage{
+	background-color: #1aa6b7;
+}
+
+.emailButton, .skypeButton{
+	border: 1px solid green;
+	background-color: #e7f1ff;
+}
+
+.emailButton:hover, .skypeButton:hover{
+	background-color: white;
+}
+
+.channelName, .varsity, .bge{
+	display: inline;
+	color: #000851;
+}
+
+.varsity:hover, .bge:hover{
+	color: blue;
+}
+
+.myFooter{
+	background-color: #00e4f6;
+	height: 200px;
+	width: 100%;
+		
+}
+
+.footerText{
+	padding-top: 15px;
+	text-align: center;
+}
+
+.spaceMaker{
+	height: 5px;
+}
+
+.socialIcons img{
+	padding-top: 30px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.socialIcons a{
+	display: inline;
+}
+
+.socialIcons img:hover{
+    transform: scale(1.1);
+}
+
+.card{
+	width: 21rem;
+}
+
+.card-body{
+	height: 67px;
+	line-height: 32px;
+}
+
+.card-title{
+	line-height: 0px;
+}
+
+.projects div{
+	padding: 30px;
+	border: 2px solid #1aa6b7;
+	text-align: center;
+	margin: 10px;
+	float: left;
+}
+
+.projects div:hover{
+	background: #ccddee;
+}
+
+@media screen and (max-width: 500px){
+	.nowrap{
+		white-space: nowrap;
+	}
+}
+
+
+@media screen and (max-width: 400px){
+
+	table .row{
+		width: 17rem;
+	}
+
+	.card{
+		width: 16rem;
+	}
+
+	.card-img-top{
+		width: 15.9rem;
+	}
+
+	.myFooter{
+		font-size: 0.9rem;
+	}
+
+	.nowrap{
+		white-space: nowrap;
+	}
+
+	.projects div{
+		width: 16rem;
+	}
+}
