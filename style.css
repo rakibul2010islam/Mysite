@@ -103,16 +103,78 @@ a{
 	line-height: 0px;
 }
 
+/*Other Projects*/
+
 .projects div{
-	padding: 30px;
+	padding: 25px;
 	border: 2px solid #1aa6b7;
 	text-align: center;
 	margin: 10px;
 	float: left;
 }
 
+.projects h4{
+	text-align: left;
+}
+
 .projects div:hover{
 	background: #ccddee;
+}
+
+/*Website Projects*/
+
+.websites {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.websites a{
+	display: inline-block;
+	text-align: center;
+	margin: 1rem 0;
+}
+
+.websites a .text{
+	background: rgba(0, 204, 255, 0.8);
+	display: block;
+}
+
+.websites a:hover .text{
+	background: black;
+	color: white;
+}
+
+.websites a div{
+	width: 12rem;
+	height: 15rem;
+	border: 1px solid black;
+}
+
+.site-1 {
+	background: url(images/website1.png);
+	background-position: center;
+	background-size: cover;
+}
+.site-2 {
+	background: url(images/website2.png);
+	background-position: center;
+	background-size: cover;
+}
+.site-3 {
+	background: url(images/website3.png);
+	background-position: center;
+	background-size: cover;
+}
+.site-4 {
+	background: url(images/website4.png);
+	background-position: center;
+	background-size: cover;
+}
+.site-5 {
+	background: url(images/website5.png);
+	background-position: center;
+	background-size: cover;
 }
 
 @media screen and (max-width: 500px){
@@ -146,5 +208,17 @@ a{
 
 	.projects div{
 		width: 16rem;
+	}
+}
+
+
+@media screen and (max-width: 320px){
+	.projects h4, h4{
+		font-size: 1.3rem;
+		text-align: center;
+	}
+
+	.container{
+		padding-left: 4px;
 	}
 }
