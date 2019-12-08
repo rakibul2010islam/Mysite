@@ -103,6 +103,15 @@ a{
 	line-height: 0px;
 }
 
+/*Wordpress themes section*/
+div.wp-themes a{
+	margin-left: 10px;
+	border: 1px dashed black;
+	color: blue;
+	display: inline-block;
+	padding: 3px 5px;
+}
+
 /*Other Projects*/
 
 .projects div{
